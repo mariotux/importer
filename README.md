@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+- Docker
+- ruby 2.6.5
+- Rails 6.0.2.1
 
-Things you may want to cover:
+## Test solution with rabbitmq
+This solution uses rabbitmq to run in background different workers to process the 
+information in different threads and deliver the hard task, like to save information 
+in the database, for the las process.
 
-* Ruby version
 
-* System dependencies
+## Steps
 
-* Configuration
+1.- docker-compose up 
 
-* Database creation
+2.- rails db:create db:migrate
 
-* Database initialization
+3.- rails rb:workers ( run this in a terminal 1, this task start the background workers )
 
-* How to run the test suite
+4.- rails csv:import ( run this in a terminal 2, this start the import) 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Can you see the process of queues looking at the queues in rabbitmq: http://localhost:15672/#/queues

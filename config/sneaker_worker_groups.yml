@@ -1,0 +1,12 @@
+rows:
+  classes: RowWorker
+  workers: 2
+countries:
+  classes: CountryWorker
+  workers: 1
+sectors:
+  classes: SectorWorker
+  workers: 1
+emissions:
+  classes: EmissionWorker
+  workers: 6
