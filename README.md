@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+- Docker
+- ruby 2.6.5
+- Rails 6.0.2.1
 
-Things you may want to cover:
+## Test solution 
+This solution uses a task who it read the csv file and it is processing each csv line
+ as different emissions.
 
-* Ruby version
 
-* System dependencies
+## Steps
 
-* Configuration
+1.- docker-compose up 
 
-* Database creation
+2.- rails db:create db:migrate
 
-* Database initialization
+3.- rails csv:import 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The task doesn't print anything in the console, but you can run a rails console to check the
+results of each object.

@@ -25,3 +25,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+**/settings/*-local.yml
+**/settings-local.yml
+.chamber*.enc
+.chamber*.pem
+.chamber*.enc.pass
+!.chamber*.pub.pem
